@@ -1,0 +1,8 @@
+# Compilados
+*.exe
+sistema
+*.o
+
+# Pastas e arquivos do SO
+.DS_Store
+Thumbs.db
