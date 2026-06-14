@@ -70,9 +70,8 @@ void liberar_fila(Fila* f) {
         while (atual != NULL) {
             NohFila* temp = atual;
             atual = atual->proximo;
-            // A fila não deve liberar o atendimento se ele for passado para o histórico
-            // Mas para casos de encerramento do programa sem atender:
-            liberar_atendimento(temp->atendimento);
+            // Libera apenas o no da fila. Os atendimentos pertencem ao
+            // historico (lista), que e quem libera a memoria deles no final.
             free(temp);
         }
         free(f);
